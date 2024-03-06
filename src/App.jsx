@@ -9,7 +9,7 @@ const [connErr,setConnErr]=useState(false)
 
 const fetchActivity= async()=>{
   try {
-    const response = await fetch(`https://www.boredapi.com/api/activity?type=${category.toLowerCase()}`)
+    const response = await fetch(`http://www.boredapi.com/api/activity?type=${category.toLowerCase()}`)
     const data = await response.json()
     if (response.ok){
       setActivity(data)
